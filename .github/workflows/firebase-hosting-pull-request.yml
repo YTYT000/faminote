@@ -17,5 +17,5 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_FAMINOTE_5C435 }}'
-          projectId: faminote-5c435
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_FAMINOTE_APP }}'
+          projectId: faminote-app

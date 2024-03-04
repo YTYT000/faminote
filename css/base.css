@@ -89,4 +89,19 @@ h6 {
   /* Microsoft Edge */
   color: #9c9c9c;
 }
+
+/*数値入力欄のスピンボタンの非表示*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -webkit-appearance: textfield;
+          appearance: textfield;
+  -moz-appearance: textfield;
+}
 /*# sourceMappingURL=base.css.map */
