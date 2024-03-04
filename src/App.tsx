@@ -12,27 +12,7 @@ import ConditionContext from "./ConditionContext";
 import { RecordEditContext } from "./RecordEditContext";
 import NavItem from "./NavItem";
 
-import img_logo from "./img/logo.png";
-import img_IconRecord from "./img/nav-icon_record.png";
-import img_IconRecordActive from "./img/nav-icon_record--active.png";
-import img_IconGraph from "./img/nav-icon_graph.png";
-import img_IconGraphActive from "./img/nav-icon_graph--active.png";
-import img_IconCalendar from "./img/nav-icon_calendar.png";
-import img_IconCalendarActive from "./img/nav-icon_calendar--active.png";
-import img_IconInfo from "./img/nav-icon_info.png";
-import img_IconInfoActive from "./img/nav-icon_info--active.png";
-import img_record_food__pcnav from "./img/record_food--pcnav.png";
-import img_record_water__pcnav from "./img/record_water--pcnav.png";
-import img_record_toilet__pcnav from "./img/record_toilet--pcnav.png";
-import img_record_care__pcnav from "./img/record_care--pcnav.png";
-import img_record_weight__pcnav from "./img/record_weight--pcnav.png";
-import img_record_medicine__pcnav from "./img/record_medicine--pcnav.png";
-import img_record_condition__pcnav from "./img/record_condition--pcnav.png";
-import img_record_walking__pcnav from "./img/record_walking--pcnav.png";
-import img_record_bodyTemperature__pcnav from "./img/record_body-temperature--pcnav.png";
-import img_record_hospital__pcnav from "./img/record_hospital--pcnav.png";
-import img_record_diary__pcnav from "./img/record_diary--pcnav.png";
-import img_record_others__pcnav from "./img/record_others--pcnav.png";
+import * as images from "./images";
 
 export type Item = {
   id: string;
@@ -109,15 +89,15 @@ function App() {
             <div className="sideBar-pc">
               <h1 className="sideBar-pc__logo">
                 <Link to="/">
-                  <img alt="" src={img_logo} />
+                  <img alt="" src={images.img_logo} />
                 </Link>
               </h1>
               <nav className="sideBar-pc__navMenu navPc">
                 <ul className="navPc__list navPcList">
                   <NavItem
                     to="/"
-                    icon={img_IconRecord}
-                    activeIcon={img_IconRecordActive}
+                    icon={images.img_IconRecord}
+                    activeIcon={images.img_IconRecordActive}
                   >
                     記録
                   </NavItem>
@@ -137,7 +117,7 @@ function App() {
                         }}
                         className="record-pc__button"
                       >
-                        <img alt="" src={img_record_food__pcnav} />
+                        <img alt="" src={images.img_record_food__pcnav} />
                         ごはん
                       </button>
                     </Link>
@@ -153,7 +133,7 @@ function App() {
                         }}
                         className="record-pc__button"
                       >
-                        <img alt="" src={img_record_water__pcnav} />
+                        <img alt="" src={images.img_record_water__pcnav} />
                         お水
                       </button>
                     </Link>
@@ -169,7 +149,7 @@ function App() {
                         }}
                         className="record-pc__button"
                       >
-                        <img alt="" src={img_record_toilet__pcnav} />
+                        <img alt="" src={images.img_record_toilet__pcnav} />
                         トイレ
                       </button>
                     </Link>
@@ -185,7 +165,7 @@ function App() {
                         }}
                         className="record-pc__button"
                       >
-                        <img alt="" src={img_record_care__pcnav} />
+                        <img alt="" src={images.img_record_care__pcnav} />
                         ケア
                       </button>
                     </Link>
@@ -200,7 +180,7 @@ function App() {
                         }}
                         className="record-pc__button"
                       >
-                        <img alt="" src={img_record_weight__pcnav} />
+                        <img alt="" src={images.img_record_weight__pcnav} />
                         体重
                       </button>
                     </Link>
@@ -216,7 +196,7 @@ function App() {
                         }}
                         className="record-pc__button"
                       >
-                        <img alt="" src={img_record_medicine__pcnav} />
+                        <img alt="" src={images.img_record_medicine__pcnav} />
                         お薬
                       </button>
                     </Link>
@@ -230,7 +210,7 @@ function App() {
                         }}
                         className="record-pc__button"
                       >
-                        <img alt="" src={img_record_condition__pcnav} />
+                        <img alt="" src={images.img_record_condition__pcnav} />
                         体調
                       </button>
                     </Link>
@@ -246,7 +226,10 @@ function App() {
                         }}
                         className="record-pc__button"
                       >
-                        <img alt="" src={img_record_bodyTemperature__pcnav} />
+                        <img
+                          alt=""
+                          src={images.img_record_bodyTemperature__pcnav}
+                        />
                         体温
                       </button>
                     </Link>
@@ -262,7 +245,7 @@ function App() {
                         }}
                         className="record-pc__button"
                       >
-                        <img alt="" src={img_record_walking__pcnav} />
+                        <img alt="" src={images.img_record_walking__pcnav} />
                         お散歩
                       </button>
                     </Link>
@@ -278,7 +261,7 @@ function App() {
                         }}
                         className="record-pc__button"
                       >
-                        <img alt="" src={img_record_hospital__pcnav} />
+                        <img alt="" src={images.img_record_hospital__pcnav} />
                         病院
                       </button>
                     </Link>
@@ -294,7 +277,7 @@ function App() {
                         }}
                         className="record-pc__button"
                       >
-                        <img alt="" src={img_record_diary__pcnav} />
+                        <img alt="" src={images.img_record_diary__pcnav} />
                         日記
                       </button>
                     </Link>
@@ -310,7 +293,7 @@ function App() {
                         }}
                         className="record-pc__button"
                       >
-                        <img alt="" src={img_record_others__pcnav} />
+                        <img alt="" src={images.img_record_others__pcnav} />
                         その他
                       </button>
                     </Link>
@@ -333,8 +316,8 @@ function App() {
                   {/* ナビメニュー 体重グラフ */}
                   <NavItem
                     to="/graph"
-                    icon={img_IconGraph}
-                    activeIcon={img_IconGraphActive}
+                    icon={images.img_IconGraph}
+                    activeIcon={images.img_IconGraphActive}
                   >
                     体重グラフ
                   </NavItem>
@@ -342,8 +325,8 @@ function App() {
                   {/* ナビメニュー カレンダー */}
                   <NavItem
                     to="/calendar"
-                    icon={img_IconCalendar}
-                    activeIcon={img_IconCalendarActive}
+                    icon={images.img_IconCalendar}
+                    activeIcon={images.img_IconCalendarActive}
                   >
                     カレンダー
                   </NavItem>
@@ -351,8 +334,8 @@ function App() {
                   {/* ナビメニュー 登録情報 */}
                   <NavItem
                     to="/info"
-                    icon={img_IconInfo}
-                    activeIcon={img_IconInfoActive}
+                    icon={images.img_IconInfo}
+                    activeIcon={images.img_IconInfoActive}
                   >
                     登録情報
                   </NavItem>

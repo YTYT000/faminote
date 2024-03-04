@@ -1,21 +1,9 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
 import Modal from "react-modal";
+
 import ConditionContext, { ConditionContextType } from "./ConditionContext";
 import { RecordEditContext } from "./RecordEditContext";
-
-import img_exitButton from "./img/modal_exitbutton.png";
-import img_conditionOn from "./img/daily-summary_condition-mark--on.png";
-import img_conditionOff from "./img/daily-summary_condition-mark--off.png";
-import img_record_food from "./img/record_food--orange-line.png";
-import img_record_water from "./img/record_water--orange-line.png";
-import img_record_toilet from "./img/record_toilet--orange-line.png";
-import img_record_care from "./img/record_care--orange-line.png";
-import img_record_medicine from "./img/record_medicine--orange-line.png";
-import img_record_bodyTemperature from "./img/record_body-temperature--orange-line.png";
-import img_record_walking from "./img/record_walking--orange-line.png";
-import img_record_hospital from "./img/record_hospital--orange-line.png";
-import img_record_diary from "./img/record_diary--orange-line.png";
-import img_record_others from "./img/record_hospital--orange-line.png";
+import * as images from "./images";
 
 type ModalComponentProps = {
   isOpen: boolean;
@@ -111,16 +99,16 @@ const ModalComponent: React.FC<ModalComponentProps> = ({
 
   //記録各アイテムのアイコン
   const icons: Record<string, string> = {
-    food: img_record_food,
-    water: img_record_water,
-    toilet: img_record_toilet,
-    care: img_record_care,
-    medicine: img_record_medicine,
-    "body-temperature": img_record_bodyTemperature,
-    walking: img_record_walking,
-    hospital: img_record_hospital,
-    diary: img_record_diary,
-    others: img_record_others,
+    food: images.img_record_food,
+    water: images.img_record_water,
+    toilet: images.img_record_toilet,
+    care: images.img_record_care,
+    medicine: images.img_record_medicine,
+    "body-temperature": images.img_record_bodyTemperature,
+    walking: images.img_record_walking,
+    hospital: images.img_record_hospital,
+    diary: images.img_record_diary,
+    others: images.img_record_others,
   };
 
   //モーダル開閉時のイベント
@@ -149,7 +137,7 @@ const ModalComponent: React.FC<ModalComponentProps> = ({
       className="modal__contentWrap"
     >
       <button onClick={onRequestClose} className="modal__exitButton">
-        <img alt="" src={img_exitButton} />
+        <img alt="" src={images.img_exitButton} />
       </button>
       <div className="modal__content">
         <div className="modal__inner">
@@ -466,8 +454,8 @@ const ModalComponent: React.FC<ModalComponentProps> = ({
                             className="heart"
                             src={
                               index < localRating
-                                ? img_conditionOn
-                                : img_conditionOff
+                                ? images.img_conditionOn
+                                : images.img_conditionOff
                             }
                             onClick={() => handleClick(index)}
                             alt="heart"

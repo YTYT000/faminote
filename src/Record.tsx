@@ -1,15 +1,9 @@
 import { useContext } from "react";
+
 import ConditionContext from "./ConditionContext";
 import { RecordEditContext } from "./RecordEditContext";
 import { Item } from "./App";
-
-import img_conditionOn from "./img/daily-summary_condition-mark--on.png";
-import img_conditionOff from "./img/daily-summary_condition-mark--off.png";
-import img_dailySummary_weight from "./img/daily-summary_weight.png";
-import img_dailySummary_condition from "./img/daily-summary_condition.png";
-import img_dailySummary_food from "./img/daily-summary_food.png";
-import img_dailySummary_water from "./img/daily-summary_water.png";
-import img_EditButton from "./img/daily-log_edit.png";
+import * as images from "./images";
 
 type RecordProps = {
   items: {
@@ -48,7 +42,7 @@ const Record: React.FC<RecordProps> = ({
   const calculateTotalFoodAmount = (items: RecordProps["items"]) => {
     return items.reduce((total, item) => {
       if (item.title === "ごはん") {
-        return total + Number(item.detailTextFoodAmount); // 修正
+        return total + Number(item.detailTextFoodAmount);
       }
       return total;
     }, 0);
@@ -98,7 +92,7 @@ const Record: React.FC<RecordProps> = ({
           <li className="dailySummaryList__item">
             <div className="dailySummaryList__heading">
               <div className="dailySummaryList__icon">
-                <img alt="" src={img_dailySummary_weight} />
+                <img alt="" src={images.img_dailySummary_weight} />
               </div>
               <h4 className="dailySummaryList__title">体重</h4>
             </div>
@@ -111,7 +105,7 @@ const Record: React.FC<RecordProps> = ({
           <li className="dailySummaryList__item">
             <div className="dailySummaryList__heading">
               <div className="dailySummaryList__icon">
-                <img alt="" src={img_dailySummary_condition} />
+                <img alt="" src={images.img_dailySummary_condition} />
               </div>
               <h4 className="dailySummaryList__title">体調</h4>
             </div>
@@ -123,8 +117,8 @@ const Record: React.FC<RecordProps> = ({
                       alt=""
                       src={
                         index < conditionContext.condition
-                          ? img_conditionOn
-                          : img_conditionOff
+                          ? images.img_conditionOn
+                          : images.img_conditionOff
                       }
                     />
                   </li>
@@ -135,7 +129,7 @@ const Record: React.FC<RecordProps> = ({
           <li className="dailySummaryList__item">
             <div className="dailySummaryList__heading">
               <div className="dailySummaryList__icon">
-                <img alt="" src={img_dailySummary_food} />
+                <img alt="" src={images.img_dailySummary_food} />
               </div>
               <h4 className="dailySummaryList__title">ごはん</h4>
             </div>
@@ -148,7 +142,7 @@ const Record: React.FC<RecordProps> = ({
           <li className="dailySummaryList__item">
             <div className="dailySummaryList__heading">
               <div className="dailySummaryList__icon">
-                <img alt="" src={img_dailySummary_water} />
+                <img alt="" src={images.img_dailySummary_water} />
               </div>
               <h4 className="dailySummaryList__title">お水</h4>
             </div>
@@ -189,7 +183,7 @@ const Record: React.FC<RecordProps> = ({
                       onClick={() => handleEditClick(item)}
                       className="dailyLogList__editButton"
                     >
-                      <img alt="" src={img_EditButton} />
+                      <img alt="" src={images.img_EditButton} />
                     </button>
                   </div>
 
