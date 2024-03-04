@@ -1,11 +1,7 @@
-import { useState } from "react";
+import React, { useState, Suspense } from "react";
 import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 
-import Record from "./Record";
-import Graph from "./Graph";
-import Info from "./Info";
-import Calendar from "./Calendar";
 import Sp from "./Sp";
 import ModalComponent from "./ModalComponent";
 import ConditionContext from "./ConditionContext";
@@ -13,6 +9,12 @@ import { RecordEditContext } from "./RecordEditContext";
 import NavItem from "./NavItem";
 
 import * as images from "./images";
+
+// コード分割にReact.lazyを使用
+const LazyRecord = React.lazy(() => import("./Record"));
+const LazyGraph = React.lazy(() => import("./Graph"));
+const LazyInfo = React.lazy(() => import("./Info"));
+const LazyCalendar = React.lazy(() => import("./Calendar"));
 
 export type Item = {
   id: string;
@@ -354,26 +356,28 @@ function App() {
 
               {/* PCページ */}
               <div className="inner--pc">
-                <Routes>
-                  {/* 記録ページ */}
-                  <Route
-                    index
-                    element={
-                      <Record
-                        items={items}
-                        setModalIsOpen={setModalIsOpen}
-                        setIsEditing={setIsEditing}
-                        setModalContent={setModalContent}
-                      />
-                    }
-                  />
-                  {/* 体重グラフページ */}
-                  <Route path="/graph" element={<Graph />} />
-                  {/* カレンダーページ */}
-                  <Route path="/calendar" element={<Calendar />} />
-                  {/* 登録情報ページ */}
-                  <Route path="/info" element={<Info />} />
-                </Routes>
+                <Suspense fallback={<div>Loading...</div>}>
+                  <Routes>
+                    {/* 記録ページ */}
+                    <Route
+                      index
+                      element={
+                        <LazyRecord
+                          items={items}
+                          setModalIsOpen={setModalIsOpen}
+                          setIsEditing={setIsEditing}
+                          setModalContent={setModalContent}
+                        />
+                      }
+                    />
+                    {/* 体重グラフページ */}
+                    <Route path="/graph" element={<LazyGraph />} />
+                    {/* カレンダーページ */}
+                    <Route path="/calendar" element={<LazyCalendar />} />
+                    {/* 登録情報ページ */}
+                    <Route path="/info" element={<LazyInfo />} />
+                  </Routes>
+                </Suspense>
               </div>
             </div>
           </div>
