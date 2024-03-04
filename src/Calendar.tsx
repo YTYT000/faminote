@@ -1,6 +1,9 @@
 import { useState } from "react";
 const days = ["日", "月", "火", "水", "木", "金", "土"];
 
+import img_arrowLeft from "./img/calender_arrow-left.png";
+import img_arrowRight from "./img/calender_arrow-right.png";
+
 const Calendar = () => {
   const today = new Date();
   const [date, setDate] = useState(today);
@@ -48,13 +51,9 @@ const Calendar = () => {
       <div className="calenderPage__container">
         <div className="calenderPage__headingWrap page__headingWrap">
           <h2 className="calenderPage__heading page__heading">
-            <img alt="" src="img/calender_arrow-left.png" onClick={prevMonth} />
+            <img alt="" src={img_arrowLeft} onClick={prevMonth} />
             {`${year}年${month + 1}月`}
-            <img
-              alt=""
-              src="img/calender_arrow-right.png"
-              onClick={nextMonth}
-            />
+            <img alt="" src={img_arrowRight} onClick={nextMonth} />
           </h2>
         </div>
         <div className="weekdays">

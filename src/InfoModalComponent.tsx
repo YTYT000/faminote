@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 
+import img_exitButton from "./img/modal_exitbutton.png";
+
 interface InfoModalComponentProps {
   isOpen: boolean;
   onRequestClose: () => void;
@@ -279,7 +281,7 @@ const InfoModalComponent: React.FC<
       className="modal__contentWrap"
     >
       <button onClick={onRequestClose} className="modal__exitButton">
-        <img alt="" src="img/modal_exitbutton.png" />
+        <img alt="" src={img_exitButton} />
       </button>
       <div className="modal__content">
         <div className="modal__inner">

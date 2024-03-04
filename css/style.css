@@ -188,14 +188,14 @@
   flex: 1 1 48%;
   background: #fff;
   border-radius: 7px;
-  padding: 24px;
+  padding: 18px;
   font-size: 18px;
   color: #ffa065;
   font-weight: bold;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #efeae6;
+  border: 1px solid #f9e2ca;
 }
 
 .record-sp__button img {
@@ -299,8 +299,14 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  margin-bottom: 4px;
 }
 
+@media screen and (max-width: 767px) {
+  .dailySummaryList__heading {
+    margin-bottom: 0px;
+  }
+}
 @media screen and (max-width: 767px) {
   .dailySummaryList__heading {
     width: 126px;
@@ -457,6 +463,10 @@
 .dailyLogList__detail {
   font-size: 18px;
   color: #9c9c9c;
+}
+
+.dailySummaryList__medicineItem:not(:last-child) {
+  margin-bottom: 4px;
 }
 
 .dailyLogList__editSide {
@@ -693,13 +703,7 @@ input {
 .heart {
   width: 36px;
   height: 30px;
-  background-image: url("../img/daily-summary_condition-mark--off.png");
-  background-size: cover;
   cursor: pointer;
-}
-
-.heart.black {
-  background-image: url("../img/daily-summary_condition-mark--on.png");
 }
 
 /*画像添付ボタン*/

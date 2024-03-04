@@ -1,6 +1,28 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
+import img_IconRecord from "./img/nav-icon_record.png";
+import img_IconRecordActive from "./img/nav-icon_record--active.png";
+import img_IconGraph from "./img/nav-icon_graph.png";
+import img_IconGraphActive from "./img/nav-icon_graph--active.png";
+import img_IconCalendar from "./img/nav-icon_calendar.png";
+import img_IconCalendarActive from "./img/nav-icon_calendar--active.png";
+import img_IconInfo from "./img/nav-icon_info.png";
+import img_IconInfoActive from "./img/nav-icon_info--active.png";
+import img_RecordButton_sp from "./img/record-button--sp.png";
+import img_record_food__spnav from "./img/record_food--spnav.png";
+import img_record_water__spnav from "./img/record_water--spnav.png";
+import img_record_toilet__spnav from "./img/record_toilet--spnav.png";
+import img_record_care__spnav from "./img/record_care--spnav.png";
+import img_record_weight__spnav from "./img/record_weight--spnav.png";
+import img_record_medicine__spnav from "./img/record_medicine--spnav.png";
+import img_record_condition__spnav from "./img/record_condition--spnav.png";
+import img_record_bodyTemperature__spnav from "./img/record_body-temperature--spnav.png";
+import img_record_walking__spnav from "./img/record_walking--spnav.png";
+import img_record_hospital__spnav from "./img/record_hospital--spnav.png";
+import img_record_diary__spnav from "./img/record_diary--spnav.png";
+import img_record_others__spnav from "./img/record_others--spnav.png";
+
 interface SpProps {
   setModalIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   setModalContent: React.Dispatch<React.SetStateAction<string>>;
@@ -100,11 +122,7 @@ const Sp: React.FC<SpProps> = ({
                   <img
                     alt=""
                     className="navSpList__icon"
-                    src={
-                      path === "/"
-                        ? "img/nav-icon_record--active.png"
-                        : "img/nav-icon_record.png"
-                    }
+                    src={path === "/" ? img_IconRecordActive : img_IconRecord}
                   />
                   <span className={path === "/" ? "activeMenuName" : ""}>
                     記録
@@ -119,9 +137,7 @@ const Sp: React.FC<SpProps> = ({
                     alt=""
                     className="navSpList__icon"
                     src={
-                      path === "/graph"
-                        ? "img/nav-icon_graph--active.png"
-                        : "img/nav-icon_graph.png"
+                      path === "/graph" ? img_IconGraphActive : img_IconGraph
                     }
                   />
                   <span className={path === "/graph" ? "activeMenuName" : ""}>
@@ -141,8 +157,8 @@ const Sp: React.FC<SpProps> = ({
                     className="navSpList__icon"
                     src={
                       path === "/calendar"
-                        ? "img/nav-icon_calendar--active.png"
-                        : "img/nav-icon_calendar.png"
+                        ? img_IconCalendarActive
+                        : img_IconCalendar
                     }
                   />
                   <span
@@ -159,11 +175,7 @@ const Sp: React.FC<SpProps> = ({
                   <img
                     alt=""
                     className="navSpList__icon"
-                    src={
-                      path === "/info"
-                        ? "img/nav-icon_info--active.png"
-                        : "img/nav-icon_info.png"
-                    }
+                    src={path === "/info" ? img_IconInfoActive : img_IconInfo}
                   />
                   <span className={path === "/info" ? "activeMenuName" : ""}>
                     登録情報
@@ -183,7 +195,7 @@ const Sp: React.FC<SpProps> = ({
             setIsRecordSpVisible(true);
           }}
         >
-          <img alt="" src="img/record-button--sp.png" />
+          <img alt="" src={img_RecordButton_sp} />
         </button>
       )}
       {/* 記録メニュー */}
@@ -197,84 +209,84 @@ const Sp: React.FC<SpProps> = ({
             onClick={() => openModal("food", "ごはん")}
             className="record-sp__button"
           >
-            <img alt="" src="img/record-spmenu_food.png" />
+            <img alt="" src={img_record_food__spnav} />
             ごはん
           </button>
           <button
             onClick={() => openModal("water", "お水")}
             className="record-sp__button"
           >
-            <img alt="" src="img/record-spmenu_water.png" />
+            <img alt="" src={img_record_water__spnav} />
             お水
           </button>
           <button
             onClick={() => openModal("toilet", "トイレ")}
             className="record-sp__button"
           >
-            <img alt="" src="img/record-spmenu_toilet.png" />
+            <img alt="" src={img_record_toilet__spnav} />
             トイレ
           </button>
           <button
             onClick={() => openModal("care", "ケア")}
             className="record-sp__button"
           >
-            <img alt="" src="img/record-spmenu_care.png" />
+            <img alt="" src={img_record_care__spnav} />
             ケア
           </button>
           <button
             onClick={() => openModal("weight", "体重")}
             className="record-sp__button"
           >
-            <img alt="" src="img/record-spmenu_weight.png" />
+            <img alt="" src={img_record_weight__spnav} />
             体重
           </button>
           <button
             onClick={() => openModal("medicine", "お薬")}
             className="record-sp__button"
           >
-            <img alt="" src="img/record-spmenu_medicine.png" />
+            <img alt="" src={img_record_medicine__spnav} />
             お薬
           </button>
           <button
             onClick={() => openModal("condition", "体調")}
             className="record-sp__button"
           >
-            <img alt="" src="img/record-spmenu_condition.png" />
+            <img alt="" src={img_record_condition__spnav} />
             体調
           </button>
           <button
             onClick={() => openModal("body-temperature", "体温")}
             className="record-sp__button"
           >
-            <img alt="" src="img/record-spmenu_body-temperature.png" />
+            <img alt="" src={img_record_bodyTemperature__spnav} />
             体温
           </button>
           <button
             onClick={() => openModal("walking", "お散歩")}
             className="record-sp__button"
           >
-            <img alt="" src="img/record-spmenu_walking.png" />
+            <img alt="" src={img_record_walking__spnav} />
             お散歩
           </button>
           <button
             onClick={() => openModal("hospital", "病院")}
             className="record-sp__button"
           >
-            <img alt="" src="img/record-spmenu_hospital.png" />
+            <img alt="" src={img_record_hospital__spnav} />
             病院
           </button>
           <button
             onClick={() => openModal("diary", "日記")}
             className="record-sp__button"
           >
-            <img alt="" src="img/record-spmenu_diary.png" />
+            <img alt="" src={img_record_diary__spnav} />
             日記
           </button>
           <button
             onClick={() => openModal("others", "その他")}
             className="record-sp__button"
           >
-            <img alt="" src="img/record-spmenu_others.png" />
+            <img alt="" src={img_record_others__spnav} />
             その他
           </button>
         </div>

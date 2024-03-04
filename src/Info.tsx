@@ -1,6 +1,8 @@
 import { useState } from "react";
 import InfoModalComponent from "./InfoModalComponent";
 
+import img_ProfileImage from "./img/profile-image.png";
+
 const Info = () => {
   // Infoモーダルの開閉
   const [infoModalIsOpen, setInfoModalIsOpen] = useState(false);
@@ -11,7 +13,7 @@ const Info = () => {
   >("basicInfo");
 
   //画像
-  const [infoImageSrc, setInfoImageSrc] = useState("img/profile-image.png");
+  const [infoImageSrc, setInfoImageSrc] = useState(img_ProfileImage);
 
   //名前
   const [infoName, setInfoName] = useState("コロマル");

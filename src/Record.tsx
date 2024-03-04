@@ -3,6 +3,14 @@ import ConditionContext from "./ConditionContext";
 import { RecordEditContext } from "./RecordEditContext";
 import { Item } from "./App";
 
+import img_conditionOn from "./img/daily-summary_condition-mark--on.png";
+import img_conditionOff from "./img/daily-summary_condition-mark--off.png";
+import img_dailySummary_weight from "./img/daily-summary_weight.png";
+import img_dailySummary_condition from "./img/daily-summary_condition.png";
+import img_dailySummary_food from "./img/daily-summary_food.png";
+import img_dailySummary_water from "./img/daily-summary_water.png";
+import img_EditButton from "./img/daily-log_edit.png";
+
 type RecordProps = {
   items: {
     id: string;
@@ -90,7 +98,7 @@ const Record: React.FC<RecordProps> = ({
           <li className="dailySummaryList__item">
             <div className="dailySummaryList__heading">
               <div className="dailySummaryList__icon">
-                <img alt="" src="img/daily-summary_weight.png" />
+                <img alt="" src={img_dailySummary_weight} />
               </div>
               <h4 className="dailySummaryList__title">体重</h4>
             </div>
@@ -103,7 +111,7 @@ const Record: React.FC<RecordProps> = ({
           <li className="dailySummaryList__item">
             <div className="dailySummaryList__heading">
               <div className="dailySummaryList__icon">
-                <img alt="" src="img/daily-summary_condition.png" />
+                <img alt="" src={img_dailySummary_condition} />
               </div>
               <h4 className="dailySummaryList__title">体調</h4>
             </div>
@@ -115,8 +123,8 @@ const Record: React.FC<RecordProps> = ({
                       alt=""
                       src={
                         index < conditionContext.condition
-                          ? "img/daily-summary_condition-mark--on.png"
-                          : "img/daily-summary_condition-mark--off.png"
+                          ? img_conditionOn
+                          : img_conditionOff
                       }
                     />
                   </li>
@@ -127,7 +135,7 @@ const Record: React.FC<RecordProps> = ({
           <li className="dailySummaryList__item">
             <div className="dailySummaryList__heading">
               <div className="dailySummaryList__icon">
-                <img alt="" src="img/daily-summary_food.png" />
+                <img alt="" src={img_dailySummary_food} />
               </div>
               <h4 className="dailySummaryList__title">ごはん</h4>
             </div>
@@ -140,7 +148,7 @@ const Record: React.FC<RecordProps> = ({
           <li className="dailySummaryList__item">
             <div className="dailySummaryList__heading">
               <div className="dailySummaryList__icon">
-                <img alt="" src="img/daily-summary_water.png" />
+                <img alt="" src={img_dailySummary_water} />
               </div>
               <h4 className="dailySummaryList__title">お水</h4>
             </div>
@@ -181,7 +189,7 @@ const Record: React.FC<RecordProps> = ({
                       onClick={() => handleEditClick(item)}
                       className="dailyLogList__editButton"
                     >
-                      <img alt="" src="img/daily-log_edit.png" />
+                      <img alt="" src={img_EditButton} />
                     </button>
                   </div>
 
@@ -199,10 +207,10 @@ const Record: React.FC<RecordProps> = ({
                       )}
                       {item.title === "お薬" && (
                         <>
-                          <p className="dailySummaryList__text01">
+                          <p className="dailySummaryList__text01 dailySummaryList__medicineItem">
                             名前：{item.detailTextMedicineName || "--"}
                           </p>
-                          <p className="dailySummaryList__text02">
+                          <p className="dailySummaryList__text02 dailySummaryList__medicineItem">
                             量：{item.detailTextMedicineAmount || "--"}
                           </p>
                         </>
