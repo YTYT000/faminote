@@ -19,8 +19,10 @@ FamiNote（ファミノート）は大切な家族であるペットの健康管
 - React
 - TypeScript
 
+
 **▼インフラ**  
 - Firebase
+
 
 **▼その他**  
 - Figma
