@@ -47,10 +47,10 @@ const Calendar = () => {
   };
 
   return (
-    <div className="calenderPage page SpContentsMargin SpContentsMargin--calenderPage">
-      <div className="calenderPage__container">
-        <div className="calenderPage__headingWrap page__headingWrap">
-          <h2 className="calenderPage__heading page__heading">
+    <div className="calendarPage page SpContentsMargin SpContentsMargin--calendarPage">
+      <div className="calendarPage__container">
+        <div className="calendarPage__headingWrap page__headingWrap">
+          <h2 className="calendarPage__heading page__heading">
             <img alt="" src={images.img_arrowLeft} onClick={prevMonth} />
             {`${year}年${month + 1}月`}
             <img alt="" src={images.img_arrowRight} onClick={nextMonth} />
