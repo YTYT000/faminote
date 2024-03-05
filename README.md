@@ -12,17 +12,17 @@ FamiNote（ファミノート）は大切な家族であるペットの健康管
 など、ケアが必要な家族の生活をサポート出来ます。
 
 # 使用技術
-## フロントエンド
+**▼フロントエンド**
 - HTML
 - CSS/Sass
 - JavaScript
 - React
 - TypeScript
 
-## インフラ
+**▼インフラ**
 - Firebase
 
-## その他
+**▼その他**
 - Figma
 - Adobe Photoshop
 - Adobe Illustrator
