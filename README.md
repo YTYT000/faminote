@@ -38,11 +38,11 @@ FamiNote（ファミノート）は大切な家族であるペットの健康管
 - ごはん、お水、トイレなど、お世話内容を記録することができます。
 
 ![recordpage-01](./github_img/recordpage-01.png)
+![recordpage-02](./github_img/recordpage-02.png)
 
 
 - 記録した内容は、タイムラインにその日一日の出来事として記録されます。（画像の添付も可能です。）
 
-![recordpage-02](./github_img/recordpage-02.png)
 ![recordpage-03](./github_img/recordpage-03.png)
 
 - 一日のまとめを記録することができます。
