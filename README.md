@@ -43,7 +43,7 @@ FamiNote（ファミノート）は大切な家族であるペットの健康管
 - 記録した内容は、タイムラインにその日一日の出来事として記録されます。（画像の添付も可能です。）
 
 ![recordpage-02](./github_img/recordpage-02.png)
-
+![recordpage-03](./github_img/recordpage-03.png)
 
 - 一日のまとめを記録することができます。
   - 体重（上書きして更新することが可能です。）
@@ -51,7 +51,7 @@ FamiNote（ファミノート）は大切な家族であるペットの健康管
   - 一日の総食事量（自動計算されます。）
   - 一日の総水分摂取量（自動計算されます。）
 
-![recordpage-03](./github_img/recordpage-03.png)
+![recordpage-04](./github_img/recordpage-04.png)
 
 
 ### 体重の遷移グラフ
