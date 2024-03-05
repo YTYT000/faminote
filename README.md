@@ -69,10 +69,14 @@ FamiNote（ファミノート）は大切な家族であるペットの健康管
 ![calendarpage-01](./github_img/calendarpage-01.png)
 
 ### 登録情報の記録
-- あああ
+- 家族の情報を登録できます。
+- 「編集する」ボタンから内容を編集できます。
+
+![infopage-01](./github_img/infopage-01.png)
+![infopage-02](./github_img/infopage-02.png)
 
 ### その他
-- レスポンシブ対応
+- レスポンシブ対応済み
 
 ### 今後の実装予定
 - 記録ページ内の各タイムラインの編集機能
