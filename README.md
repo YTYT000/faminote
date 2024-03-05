@@ -58,7 +58,8 @@ FamiNote（ファミノート）は大切な家族であるペットの健康管
 - 一か月ごと、あるいは一週間ごとの体重の推移をグラフで確認できます。
 - ※現在、グラフは自動生成されたランダムな値に基づいて描画されています。
 
-
+![graphpage-01](./github_img/graphpage-01.png)
+![graphpage-02](./github_img/graphpage-02.png)
 
 
 ### カレンダー
