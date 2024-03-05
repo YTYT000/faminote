@@ -14,6 +14,13 @@ FamiNote（ファミノート）は大切な家族であるペットの健康管
 
 など、ケアが必要な家族の生活をサポート出来ます。
 
+
+**▼URL**
+https://faminote-app.web.app/
+
+
+![MV](./github_img/fv_wide.png)
+
 # 使用技術
 **▼フロントエンド**
 - HTML
