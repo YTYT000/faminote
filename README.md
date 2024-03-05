@@ -40,7 +40,7 @@ FamiNote（ファミノート）は大切な家族であるペットの健康管
 ![recordpage-01](./github_img/recordpage-01.png)
 
 
-- 記録した内容はタイムラインでその日一日の内容が記録されます。（画像の添付可能）
+- 記録した内容は、タイムラインにその日一日の出来事として記録されます。（画像の添付可能）
 
 ![recordpage-02](./github_img/recordpage-02.png)
 
