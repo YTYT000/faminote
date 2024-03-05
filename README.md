@@ -70,7 +70,7 @@ FamiNote（ファミノート）は大切な家族であるペットの健康管
 
 ### 登録情報の記録
 - 家族の情報を登録できます。
-- 「編集する」ボタンから内容を編集できます。
+- 「編集する」ボタンから各項目の内容を編集できます。
 
 ![infopage-01](./github_img/infopage-01.png)
 ![infopage-02](./github_img/infopage-02.png)
