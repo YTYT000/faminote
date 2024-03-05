@@ -12,7 +12,7 @@ FamiNote（ファミノート）は大切な家族であるペットの健康管
 
 # 使用技術
 - HTML
-- CSS
+- CSS/Sass
 - JavaScript
 - React
 - TypeScript
