@@ -2,7 +2,7 @@
 https://faminote-app.web.app/
 
 
-![MV](./fv_wide.png)
+![MV](./github_img/fv_wide.png)
 
 # 概要
 FamiNote（ファミノート）は大切な家族であるペットの健康管理アプリです。  
