@@ -16,12 +16,12 @@ FamiNote（ファミノート）は大切な家族であるペットの健康管
 - HTML
 - CSS/Sass
 - JavaScript
-- React
-- TypeScript
+- React 18.2.0
+- TypeScript 5.2.2
 
 
 **▼インフラ**
-- Firebase
+- Firebase 10.8.1
 
 
 **▼その他**
