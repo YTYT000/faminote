@@ -36,7 +36,7 @@ FamiNote（ファミノート）は大切な家族であるペットの健康管
 # 機能一覧
 ### 日々の記録
 - タイムラインでその日一日の様子やケア内容を記録できます（画像の添付可能）
-- ![recordpage-01](./github_img/recordpage-01.png)
+  ![recordpage-01](./github_img/recordpage-01.png)
 - 一日のまとめを記録できます
   - 体重（上書き可能）
   - 一日を通しての体調（上書き可能）
